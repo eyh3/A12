@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>cookie demo</title>
+    </head>
+
+    <body>
+        <p><h2>cookie demo</h2></p>
+
+        <script id="writeCookie">
+        if (document.cookie == ""){
+            cookie = window.prompt("write a cookie!","sample text");
+            document.cookie = cookie
+            alert("cookie written! refresh the page :)");
+        } else
+        alert(document.cookie);
+
+        function readCookie(){
+        alert(document.cookie);
+        }
+
+        function deleteCookie(){
+            document.cookie = ""
+            alert("cookie deleted, refresh for a new cookie")
+        }
+        </script>
+
+
+    <p>debug<br>
+    <button onclick="deleteCookie()">delete cookie</button><br>
+    <button onclick="readCookie()">read cookie</button></p>
+
+        <footer>
+            <p>&copy; 2022, Eric Huang</p>
+        </footer>
+    </body>
+</html>
